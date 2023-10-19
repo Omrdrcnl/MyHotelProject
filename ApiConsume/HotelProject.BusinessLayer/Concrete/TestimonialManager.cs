@@ -1,4 +1,5 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
+using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.EntityFramework;
 using HotelProject.EntityLayer.concrete;
 using System;
@@ -11,9 +12,9 @@ namespace HotelProject.BusinessLayer.Concrete
 {
     public class TestimonialManager:ITestimonialService
     {
-        private readonly EFTestimonialDal _testimonial;
+        private readonly ITestimonialDal _testimonial;
 
-        public TestimonialManager(EFTestimonialDal testimonial)
+        public TestimonialManager(ITestimonialDal testimonial)
         {
             _testimonial = testimonial;
         }
